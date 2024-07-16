@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/pages/homePage.dart';
-import 'package:my_first_app/themes/themeprovider.dart';
+import 'package:fyazidrb_weatherapp/pages/home_page.dart';
+import 'package:fyazidrb_weatherapp/themes/themeprovider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return MyAPpState();
+    return MyAppState();
   }
 }
 
-class MyAPpState extends State<StatefulWidget> {
-  // This widget is the root of your application.
+class MyAppState extends State<StatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -28,7 +26,7 @@ class MyAPpState extends State<StatefulWidget> {
             darkTheme: ThemeData.dark(),
             debugShowCheckedModeBanner: false,
             theme: theme.themeDate,
-            home: Homepage()),
+            home: const Homepage()),
       ),
     );
   }

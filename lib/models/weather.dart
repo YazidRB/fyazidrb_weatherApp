@@ -9,9 +9,6 @@ class Weather {
       required this.temp});
 
   factory Weather.fromJson(Map<String, dynamic> json) {
-    print("=====================================");
-    print(json);
-    print("=====================================");
     return Weather(
         cityName: json["name"],
         mainCondition: json["weather"][0]["main"],
